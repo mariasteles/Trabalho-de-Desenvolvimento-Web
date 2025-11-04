@@ -1,0 +1,150 @@
+/* ---------- ESTILO GERAL ---------- */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* ---------- CABEÇALHO E RODAPÉ ---------- */
+  header, footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 1.2em;
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    padding: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover, .ativo {
+    color: #00c97b;
+  }
+  
+  footer{
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    margin: 218px auto 0 auto;
+  }
+  /* ---------- BANNER ---------- */
+  .banner {
+    background: linear-gradient(to right, #00c97b, #007b55);
+    color: white;
+    text-align: center;
+    padding: 3em 1em;
+  }
+  
+  .banner h2 {
+    font-size: 1.8em;
+  }
+  
+  /* ---------- SEÇÕES ---------- */
+  section {
+    padding: 2em 1em;
+    text-align: center;
+  }
+  
+  /* ---------- GRID DE PRODUTOS ---------- */
+  .grid-produtos {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  @media (min-width: 992px) {
+    .grid-produtos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 991px) {
+    .grid-produtos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 599px) {
+    .grid-produtos {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .produto {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 1.2em;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .produto img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* ---------- FORMULÁRIO DE CONTATO ---------- */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #00c97b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: #00995a;
+    transform: scale(1.03);
+  }
